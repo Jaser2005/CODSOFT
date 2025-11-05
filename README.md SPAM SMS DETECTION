@@ -1,1 +1,60 @@
+# Spam SMS Detection using Machine Learning
+
+This project classifies text messages as **Spam** or **Ham (Not Spam)** using Natural Language Processing (NLP) and machine learning algorithms. It demonstrates text preprocessing, feature extraction with TF-IDF, model training, and evaluation.
+
+---
+
+## 📊 Dataset
+- **Source:** Kaggle – [SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
+- **Records:** 5,574 messages  
+- **Features:** `message` (text) and `label` (spam / ham)
+
+---
+
+## 🧠 Workflow
+1. **Text Preprocessing:**  
+   - Remove punctuation, stopwords, and convert text to lowercase.  
+   - Tokenization and Lemmatization.  
+2. **Feature Extraction:**  
+   - Transform text into numerical form using **TF-IDF Vectorization**.  
+3. **Model Training:**  
+   - Train classification models on preprocessed text data.  
+4. **Evaluation:**  
+   - Evaluate using accuracy, precision, recall, F1-score, and confusion matrix.  
+5. **Model Tuning:**  
+   - Apply `GridSearchCV` for parameter optimization.
+
+---
+
+## 🧩 Models Used
+- **Multinomial Naïve Bayes:** Ideal for text data and word frequency features.  
+- **Logistic Regression:** Strong baseline for binary classification.  
+- **Support Vector Machine (SVM):** Effective for high-dimensional text vectors.
+
+*(Multinomial Naïve Bayes achieved the best performance on TF-IDF features.)*
+
+---
+
+## 📈 Results
+- **Best Model:** Multinomial Naïve Bayes  
+- **Accuracy:** 0.98  
+- **Precision:** 0.97  
+- **Recall:** 0.95  
+- **F1-Score:** 0.96  
+
+---
+
+## 🧰 Tech Stack
+- Python  
+- scikit-learn  
+- pandas, numpy  
+- nltk (Natural Language Toolkit)  
+- matplotlib, seaborn  
+
+---
+
+## 🧾 How to Run
+```bash
+pip install -r requirements.txt
+python src/train_model.py
 

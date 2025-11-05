@@ -64,14 +64,11 @@ These results indicate a strong ability to detect fraudulent transactions while 
 ## 🧾 How to Run
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/<yourusername>/research-and-projects.git
-cd research-and-projects/credit-card-fraud-detection
+git clone https://github.com/<Jaser2005>/CODSOFT.git
+cd CODSOFT/credit-card-fraud-detection
 
 # 2️⃣ Install dependencies
 pip install -r requirements.txt
 
 # 3️⃣ Run training script
 python src/train_model.py
-
-# 4️⃣ (Optional) Open Jupyter Notebook
-jupyter notebook notebooks/credit_card_fraud_detection.ipynb

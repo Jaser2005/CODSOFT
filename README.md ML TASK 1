@@ -1,0 +1,77 @@
+# CODSOFT
+# Credit Card Fraud Detection using Machine Learning
+
+This project aims to detect fraudulent credit card transactions using advanced machine learning models. It demonstrates data preprocessing, model training, hyperparameter tuning, and evaluation techniques to effectively identify fraud in highly imbalanced datasets.
+
+---
+
+## 📊 Dataset
+- **Source:** Kaggle – [Credit Card Fraud Detection Dataset](https://www.kaggle.com/mlg-ulb/creditcardfraud)
+- **Description:** The dataset contains transactions made by European cardholders in September 2013.  
+- **Size:** 284,807 transactions, with only 492 labeled as fraudulent (~0.17% of total).
+- **Features:** 30 attributes (V1–V28, Time, Amount) + `Class` (target: 0 = Legit, 1 = Fraud).
+
+---
+
+## 🧠 Workflow
+1. **Data Loading and Exploration** – Understanding feature distribution and class imbalance.  
+2. **Preprocessing** – Scaling the `Amount` and `Time` features using `StandardScaler`.  
+3. **Handling Imbalance** – Using **SMOTE (Synthetic Minority Oversampling Technique)** to balance data.  
+4. **Model Training** – Training multiple ML classifiers on the processed data.  
+5. **Hyperparameter Tuning** – Using **GridSearchCV** to find the optimal model parameters.  
+6. **Evaluation** – Using metrics like Precision, Recall, F1-score, and ROC-AUC.  
+7. **Model Saving and Visualization** – Exporting best model and visualizing confusion matrix and ROC curve.
+
+---
+
+## 🧩 Models Used
+- **Logistic Regression:** Baseline model, interpretable and effective for linear relationships.  
+- **Random Forest Classifier:** Ensemble model handling feature interactions well.  
+- **XGBoost Classifier:** Gradient boosting model for high predictive accuracy and imbalanced data handling.  
+- **Support Vector Machine (SVM):** For margin-based separation of classes.  
+
+---
+
+## ⚙️ Hyperparameter Tuning
+`GridSearchCV` was applied on Random Forest and XGBoost to optimize parameters such as:
+- `n_estimators`, `max_depth`, `learning_rate` (for XGBoost)
+- `criterion`, `max_features`, `min_samples_split` (for Random Forest)
+
+---
+
+## 📈 Results
+- **Best Model:** XGBoost Classifier (tuned)  
+- **Accuracy:** 0.998  
+- **Precision:** 0.91  
+- **Recall:** 0.85  
+- **ROC-AUC:** 0.99  
+
+These results indicate a strong ability to detect fraudulent transactions while minimizing false positives.
+
+---
+
+## 🧰 Tech Stack
+- **Programming Language:** Python  
+- **Libraries Used:**  
+  - `pandas`, `numpy` for data manipulation  
+  - `matplotlib`, `seaborn` for visualization  
+  - `scikit-learn` for model building & evaluation  
+  - `imblearn` for SMOTE  
+  - `xgboost` for advanced boosting model  
+
+---
+
+## 🧾 How to Run
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/<yourusername>/research-and-projects.git
+cd research-and-projects/credit-card-fraud-detection
+
+# 2️⃣ Install dependencies
+pip install -r requirements.txt
+
+# 3️⃣ Run training script
+python src/train_model.py
+
+# 4️⃣ (Optional) Open Jupyter Notebook
+jupyter notebook notebooks/credit_card_fraud_detection.ipynb

@@ -1,54 +1,5 @@
-# Customer Churn Prediction using Machine Learning
+CODSOFT Machine Learning Internship
 
-This project predicts whether a customer is likely to leave (churn) a service based on their usage and demographic data. It applies supervised machine learning techniques to help businesses retain customers and reduce churn rates.
-
----
-
-## 📊 Dataset
-- **Source:** Kaggle – [Telco Customer Churn Dataset](https://www.kaggle.com/blastchar/telco-customer-churn)
-- **Records:** 7,043  
-- **Features:** 21 attributes (e.g., gender, tenure, internet service, contract type)  
-- **Target:** `Churn` (Yes / No)
-
----
-
-## 🧠 Workflow
-1. **Data Preprocessing:** Handle missing values, encode categorical variables, scale numerical features.  
-2. **EDA:** Explore customer distribution and churn rates.  
-3. **Model Training:** Apply multiple classifiers and compare their performance.  
-4. **Hyperparameter Tuning:** Optimize best model using `GridSearchCV`.  
-5. **Evaluation:** Analyze confusion matrix, precision, recall, F1-score, and ROC-AUC.
-
----
-
-## 🧩 Models Used
-- Logistic Regression  
-- Random Forest Classifier  
-- XGBoost Classifier  
-
-*(Random Forest achieved the highest accuracy after tuning.)*
-
----
-
-## 📈 Results
-- **Best Model:** Random Forest (tuned)  
-- **Accuracy:** 0.84  
-- **Precision:** 0.82  
-- **Recall:** 0.79  
-- **ROC-AUC:** 0.88  
-
----
-
-## 🧰 Tech Stack
-- Python  
-- pandas, numpy  
-- scikit-learn, xgboost  
-- matplotlib, seaborn  
-
----
-
-## 🧾 How to Run
-```bash
-pip install -r requirements.txt
-python src/train_model.py
+During this internship, I developed and implemented multiple machine learning projects focused on real-world problem solving, including Spam SMS Detection, Customer Churn Prediction, and Credit Card Fraud Detection.
+These projects strengthened my skills in data preprocessing, model training, evaluation, and deployment using algorithms such as Logistic Regression, Random Forest, and XGBoost.
 
